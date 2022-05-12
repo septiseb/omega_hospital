@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/omega_hospital/static/css/main.7c7bcb19.css",
+    "main.js": "/omega_hospital/static/js/main.aace610d.js",
+    "static/js/787.da44071e.chunk.js": "/omega_hospital/static/js/787.da44071e.chunk.js",
+    "static/media/portada_logo.jpg": "/omega_hospital/static/media/portada_logo.18dae623f12c2db666b1.jpg",
+    "static/media/omega_logo.png": "/omega_hospital/static/media/omega_logo.e5996ea8c96ac8d8d306.png",
+    "static/media/omega_info.jpeg": "/omega_hospital/static/media/omega_info.a5217e29a24a81c86be8.jpeg",
+    "static/media/omega_frontal.jpeg": "/omega_hospital/static/media/omega_frontal.ecacc31132339399c002.jpeg",
+    "static/media/consultorio.jpeg": "/omega_hospital/static/media/consultorio.1eea454f405b3c29ca9b.jpeg",
+    "static/media/laboratorio_info.jpeg": "/omega_hospital/static/media/laboratorio_info.b40dbe202828530fd10d.jpeg",
+    "static/media/whatsapp_logo.png": "/omega_hospital/static/media/whatsapp_logo.1ee748db55d428ce9e9d.png",
+    "static/media/consultorio_01.jpeg": "/omega_hospital/static/media/consultorio_01.4de909f4584943041db7.jpeg",
+    "index.html": "/omega_hospital/index.html",
+    "main.7c7bcb19.css.map": "/omega_hospital/static/css/main.7c7bcb19.css.map",
+    "main.aace610d.js.map": "/omega_hospital/static/js/main.aace610d.js.map",
+    "787.da44071e.chunk.js.map": "/omega_hospital/static/js/787.da44071e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c7bcb19.css",
+    "static/js/main.aace610d.js"
+  ]
+}
