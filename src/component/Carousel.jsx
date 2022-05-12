@@ -11,15 +11,14 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-const Carrousel = ({slides}) => {
+const Carrousel = ({children,interval}) => {
   return (
     <>
-      <div className="h-full w-full px-24">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
+            delay: interval,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -29,12 +28,11 @@ const Carrousel = ({slides}) => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          {slides.map((sl,idx)=>(
+          {children.map((sl,idx)=>(
             <SwiperSlide key={idx}>{sl}</SwiperSlide>
           ))}
           
         </Swiper>
-      </div>
     </>
   );
 };

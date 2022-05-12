@@ -18,10 +18,10 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<MainPage />} />
-          <Route exact path='/aviso-de-privacidad' element={<MainPage />} />
-          <Route exact path='/venta-consultorios' element={<VentaConsultorioPage />} />
-          <Route exact path='/renta-consultorios' element={<RentaConsultorioPage />} />
-          <Route exact path='/servicios-medicos' element={<ServiciosMedicosPage />} />
+          <Route exact path='/aviso_de_privacidad' element={<MainPage />} />
+          <Route exact path='/venta_consultorios' element={<VentaConsultorioPage />} />
+          <Route exact path='/renta_consultorios' element={<RentaConsultorioPage />} />
+          <Route exact path='/servicios_medicos' element={<ServiciosMedicosPage />} />
           <Route exact path='/laboratorio' element={<LaboratorioPage />} />
           <Route exact path='/nosotros' element={<NosotrosPage />} />
           <Route exact path='/contacto' element={<ContactFormPage />} />
