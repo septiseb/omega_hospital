@@ -17,7 +17,7 @@ const MainSection = () => {
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
                     <div className="relative inset-0">
-                    <Carrousel slides={imgArr} />
+                    <Carrousel interval={3000}>{imgArr}</Carrousel>
 
                        
                         <div className="absolute inset-0 bg-gradient-to-r from-sky-50 to-sky-50 mix-blend-multiply" />
