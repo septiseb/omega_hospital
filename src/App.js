@@ -13,20 +13,21 @@ import RentaConsultorioPage from './page/RentaConsultorio.Page';
 import ServiciosMedicosPage from './page/ServiciosMedicosPage';
 import VentaConsultorioPage from './page/VentaConsultorio.Page';
 
-function App() {
+const App = () => {
   return (
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<MainPage />} />
-          <Route exact path='/aviso_de_privacidad' element={<MainPage />} />
-          <Route exact path='/venta_consultorios' element={<VentaConsultorioPage />} />
-          <Route exact path='/renta_consultorios' element={<RentaConsultorioPage />} />
-          <Route exact path='/servicios_medicos' element={<ServiciosMedicosPage />} />
-          <Route exact path='/laboratorio' element={<LaboratorioPage />} />
-          <Route exact path='/nosotros' element={<NosotrosPage />} />
-          <Route exact path='/contacto' element={<ContactFormPage />} />
-        </Routes>
-      </Router>
+    <Router>
+      <Routes>
+        <Route element={<MainPage />} />
+        <Route exact path='/' element={<MainPage />} />
+        <Route exact path='/aviso_de_privacidad' element={<MainPage />} />
+        <Route exact path='/venta_consultorios' element={<VentaConsultorioPage />} />
+        <Route exact path='/renta_consultorios' element={<RentaConsultorioPage />} />
+        <Route exact path='/servicios_medicos' element={<ServiciosMedicosPage />} />
+        <Route exact path='/laboratorio' element={<LaboratorioPage />} />
+        <Route exact path='/nosotros' element={<NosotrosPage />} />
+        <Route exact path='/contacto' element={<ContactFormPage />} />
+      </Routes>
+    </Router>
   );
 }
 

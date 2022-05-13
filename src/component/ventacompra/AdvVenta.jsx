@@ -1,5 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/react/outline'
+import React from 'react';
+
 
 const features = [
   {
@@ -27,7 +29,7 @@ const features = [
   },
 ]
 
-export default function Example() {
+const AdVenta = ()=> {
   return (
     <div className="bg-gray-50 overflow-hidden">
       <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -78,3 +80,5 @@ export default function Example() {
     </div>
   )
 }
+
+export default AdVenta;

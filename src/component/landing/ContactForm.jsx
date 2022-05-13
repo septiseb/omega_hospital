@@ -9,7 +9,7 @@ const ContactForm = ()=> {
             <img
               className="h-56 w-full object-contain lg:absolute lg:h-full"
               src={require("../../utils/img/laboratorio_info.jpeg")}
-              alt=""
+              alt="Laboratorios Hospital Omega San Juan del Rio"
             />
           </div>
         </div>

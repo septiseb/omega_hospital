@@ -1,19 +1,6 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+import React from 'react';
+
+
 const people = [
     {
         name: 'Lindsay Walton',
@@ -66,7 +53,7 @@ const people = [
     // More people...
 ]
 
-export default function Example() {
+const ConsultorioDetail = () => {
     return (
         <div className="bg-white">
             <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -125,3 +112,5 @@ export default function Example() {
         </div>
     )
 }
+
+export default ConsultorioDetail

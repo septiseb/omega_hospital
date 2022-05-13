@@ -35,7 +35,6 @@ const Nav = () => {
     return (
         <>
             <header>
-                <nav>
                     <Popover className="relative bg-white">
                         <div className="flex items-center max-w-7xl mx-auto px-12 py-6 sm:px-6 md:justify-center md:space-x-16 lg:px-12">
                             <div className="flex justify-end item-end pr-16">
@@ -154,7 +153,7 @@ const Nav = () => {
                                                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                                                     >
                                                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-sky-400 to-sky-600 text-white">
-                                                            <item.icon className="h-6 w-6" aria-hidden="true" />
+                                                            {item.icon}
                                                         </div>
                                                         <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
                                                     </a>
@@ -179,7 +178,6 @@ const Nav = () => {
                             </Popover.Panel>
                         </Transition>
                     </Popover>
-                </nav>
             </header>
 
         </>

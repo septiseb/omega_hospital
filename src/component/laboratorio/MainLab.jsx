@@ -1,4 +1,5 @@
 import { StarIcon } from '@heroicons/react/solid'
+import React from 'react';
 
 const products = [
   {
@@ -48,7 +49,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const MainLab= ()=> {
+const MainLab= () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto overflow-hidden sm:px-6 lg:px-8">
