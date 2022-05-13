@@ -1,4 +1,3 @@
-service: omega-main
 runtime: nodejs16
 handlers:
 - url: /(.*\..+)$
