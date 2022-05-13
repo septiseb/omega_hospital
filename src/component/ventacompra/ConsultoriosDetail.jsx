@@ -56,7 +56,7 @@ const ConsultorioDetail = () => {
     return (
         <div className="bg-white">
             <div className="relative overflow-hidden">
-                <div className="absolute inset-y-0 h-full w-full" aria-hidden="true">
+                <div className="absolute inset-y-0 h-full w-full hidden lg:contents" aria-hidden="true">
                     <div className="relative h-full">
                         <svg
                             className="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full"
@@ -80,7 +80,7 @@ const ConsultorioDetail = () => {
                             <rect width={404} height={784} fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
                         </svg>
                         <svg
-                            className="absolute z-auto left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"
+                            className="absolute z-0 left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"
                             width={404}
                             height={784}
                             fill="none"
@@ -112,11 +112,10 @@ const ConsultorioDetail = () => {
                             </p>
                         </div>
                         <ul
-                            role="list"
                             className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
                         >
                             {consultorio.map((person) => (
-                                <li key={person.name} className="z-10">
+                                <li key={person.name} className="z-40">
                                     <div className="space-y-4">
                                         <div className="aspect-w-3 aspect-h-2">
                                             <img className="object-cover shadow-lg rounded-lg" src={person.imageUrl} alt="" />
