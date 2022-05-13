@@ -8,7 +8,7 @@ import MapHospital from '../component/landing/MapHospital';
 const VentaConsultorioPage = () => {
     return (
         <div>
-            <VentaConsultorio />
+            <VentaConsultorio>Preventa de Consultorios</VentaConsultorio>
             <AdvVenta />
             <ConsultoriosDetail />
             <BubbleWhats />
