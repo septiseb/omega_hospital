@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/react/outline'
+import { CashIcon, OfficeBuildingIcon, CreditCardIcon, ColorSwatchIcon } from '@heroicons/react/outline'
 import React from 'react';
 
 
@@ -7,25 +7,25 @@ const features = [
   {
     name: 'Retorno de inversión',
     description: 'Asegurado. Invertir en Salud hoy es una certeza. Gana plusvalía desde hoy.',
-    icon: GlobeAltIcon,
+    icon: CashIcon,
   },
   {
     name: 'Infraestrucutra del Hospital',
     description:
       'Farmacia, Estacionamiento, Urgencias, Nutrición y Hospitalización.',
-    icon: ScaleIcon,
+    icon: OfficeBuildingIcon,
   },
   {
     name: 'Servicios Hospitalarios',
     description:
       'Quirófanos, Laboratorios, Rayos X, Terapia intesiva, Área de vacunación, Ultraosnidos, UCIN y más.',
-    icon: LightningBoltIcon,
+    icon: ColorSwatchIcon,
   },
   {
     name: 'Obtén Crédito',
     description:
       'Aplica y obten un crédito a 5 años con Santander. Obtén flujo de efectivo positivo a partir de que se rente tu consultorio.',
-    icon: MailIcon,
+    icon: CreditCardIcon,
   },
 ]
 
@@ -66,7 +66,7 @@ const AdVenta = ()=> {
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-sky-700 text-white">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <p className="mt-5 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>

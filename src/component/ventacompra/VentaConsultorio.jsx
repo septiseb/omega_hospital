@@ -12,7 +12,7 @@ const VentaConsultorio = () => {
 
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 ">
       <div className="relative overflow-hidden">
         <div className="absolute inset-y-0 h-full w-full" aria-hidden="true">
           <div className="relative h-full">
@@ -78,7 +78,7 @@ const VentaConsultorio = () => {
         <div className="relative">
           <div className="absolute inset-0 flex flex-col" aria-hidden="true">
             <div className="flex-1" />
-            <div className="flex-1 w-full bg-gray-800" />
+            <div className="flex-1 w-full bg-sky-700" />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <Carrousel interval={8000}>
@@ -92,7 +92,7 @@ const VentaConsultorio = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-800">
+      <div className="bg-sky-700">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-12 sm:px-6 lg:px-8">
         </div>
       </div>

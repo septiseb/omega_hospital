@@ -1,112 +1,160 @@
 import React from 'react';
 
-
-const people = [
+let urlWame = "https://wa.me/5214425823235?text="
+const consultorio = [
     {
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
+        name: 'Consultorio 205',
+        m2: '22.75 m2',
         imageUrl:
             require("../../utils/img/consultorio/consultorio.jpeg"),
-        twitterUrl: '#',
-        linkedinUrl: '#',
+        plano: require('../../utils/img/consultorio/consultorio_205.pdf'),
+        wameUrl: "Me%20gustaria%20tener%20más%20información%20sobre%20el%20Consultorio%20205",
     },
     {
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
+        name: 'Consultorio 320',
+        m2: '22.87 m2',
         imageUrl:
             require("../../utils/img/consultorio/consultorio.jpeg"),
-        twitterUrl: '#',
-        linkedinUrl: '#',
+        plano: require('../../utils/img/consultorio/consultorio_320.pdf'),
+        wameUrl: "Me%20gustaria%20tener%20más%20información%20sobre%20el%20Consultorio%20320",
     },
     {
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
+        name: 'Consultorio 321',
+        m2: '22.87 m2',
         imageUrl:
             require("../../utils/img/consultorio/consultorio.jpeg"),
-        twitterUrl: '#',
-        linkedinUrl: '#',
+        plano: require('../../utils/img/consultorio/consultorio_321.pdf'),
+        wameUrl: "Me%20gustaria%20tener%20más%20información%20sobre%20el%20Consultorio%20321",
     },
     {
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
+        name: 'Consultorio 322',
+        m2: '23.70 m2',
         imageUrl:
             require("../../utils/img/consultorio/consultorio.jpeg"),
-        twitterUrl: '#',
-        linkedinUrl: '#',
+        plano: require('../../utils/img/consultorio/consultorio_322.pdf'),
+        wameUrl: "Me%20gustaria%20tener%20más%20información%20sobre%20el%20Consultorio%20322",
     },
     {
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
+        name: 'Consultorio 323',
+        m2: '35.70 m2',
         imageUrl:
             require("../../utils/img/consultorio/consultorio.jpeg"),
-        twitterUrl: '#',
-        linkedinUrl: '#',
+        plano: require('../../utils/img/consultorio/consultorio_323.pdf'),
+        wameUrl: "Me%20gustaria%20tener%20más%20información%20sobre%20el%20Consultorio%20323",
     },
     {
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
+        name: 'Consultorio 324',
+        m2: '34.43 m2',
         imageUrl:
             require("../../utils/img/consultorio/consultorio.jpeg"),
-        twitterUrl: '#',
-        linkedinUrl: '#',
+        plano: require('../../utils/img/consultorio/consultorio_324.pdf'),
+        wameUrl: "Me%20gustaria%20tener%20más%20información%20sobre%20el%20Consultorio%20324",
     }
-    // More people...
 ]
 
 const ConsultorioDetail = () => {
     return (
         <div className="bg-white">
-            <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-                <div className="space-y-12">
-                    <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Conoce los consultorios disponibles</h2>
-                        <p className="text-xl text-gray-500">
-                            Tenemos una variedad de consultorios que se ajustan a tus necesidades, aprovecha nuestra preventa para obtener mejores precios.
-                        </p>
+            <div className="relative overflow-hidden">
+                <div className="absolute inset-y-0 h-full w-full" aria-hidden="true">
+                    <div className="relative h-full">
+                        <svg
+                            className="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full"
+                            width={404}
+                            height={784}
+                            fill="none"
+                            viewBox="0 0 404 784"
+                        >
+                            <defs>
+                                <pattern
+                                    id="e229dbec-10e9-49ee-8ec3-0286ca089edf"
+                                    x={0}
+                                    y={0}
+                                    width={20}
+                                    height={20}
+                                    patternUnits="userSpaceOnUse"
+                                >
+                                    <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                                </pattern>
+                            </defs>
+                            <rect width={404} height={784} fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+                        </svg>
+                        <svg
+                            className="absolute z-auto left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"
+                            width={404}
+                            height={784}
+                            fill="none"
+                            viewBox="0 0 404 784"
+                        >
+                            <defs>
+                                <pattern
+                                    id="d2a68204-c383-44b1-b99f-42ccff4e5365"
+                                    x={0}
+                                    y={0}
+                                    width={20}
+                                    height={20}
+                                    patternUnits="userSpaceOnUse"
+                                >
+                                    <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                                </pattern>
+                            </defs>
+                            <rect width={404} height={784} fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+                        </svg>
                     </div>
-                    <ul
-                        role="list"
-                        className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
-                    >
-                        {people.map((person) => (
-                            <li key={person.name}>
-                                <div className="space-y-4">
-                                    <div className="aspect-w-3 aspect-h-2">
-                                        <img className="object-cover shadow-lg rounded-lg" src={person.imageUrl} alt="" />
-                                    </div>
+                </div>
 
-                                    <div className="space-y-2">
-                                        <div className="text-lg leading-6 font-medium space-y-1">
-                                            <h3>{person.name}</h3>
-                                            <p className="text-indigo-600">{person.role}</p>
+                <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+                    <div className="space-y-12">
+                        <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+                            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Conoce los consultorios disponibles</h2>
+                            <p className="text-xl text-gray-500">
+                                Tenemos una variedad de consultorios que se ajustan a tus necesidades, aprovecha nuestra preventa para obtener mejores precios.
+                            </p>
+                        </div>
+                        <ul
+                            role="list"
+                            className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
+                        >
+                            {consultorio.map((person) => (
+                                <li key={person.name} className="z-10">
+                                    <div className="space-y-4">
+                                        <div className="aspect-w-3 aspect-h-2">
+                                            <img className="object-cover shadow-lg rounded-lg" src={person.imageUrl} alt="" />
                                         </div>
-                                        <ul role="list" className="flex space-x-5">
-                                            <li>
-                                                <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
-                                                    <span className="sr-only">Twitter</span>
-                                                    <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href={person.linkedinUrl} className="text-gray-400 hover:text-gray-500">
-                                                    <span className="sr-only">LinkedIn</span>
-                                                    <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path
-                                                            fillRule="evenodd"
-                                                            d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                                                            clipRule="evenodd"
-                                                        />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                        </ul>
+
+                                        <div className="space-y-2">
+                                            <div className="text-lg leading-6 font-medium space-y-1">
+                                                <h3>{person.name}</h3>
+                                                <p className="text-sky-600">{person.m2}</p>
+                                            </div>
+                                            <ul className="flex space-x-5">
+                                                <li>
+                                                    <a href={person.plano} target="_blank" className="text-gray-400 hover:text-gray-500">
+                                                        <button
+                                                            type="button"
+                                                            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                                                        >
+                                                            Ver Planos
+                                                        </button>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href={urlWame + person.wameUrl} target="_blank" className="text-gray-400 hover:text-gray-500">
+                                                        <button
+                                                            type="button"
+                                                            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-sky-700 hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-600"
+                                                        >
+                                                            Contactanos
+                                                        </button>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
