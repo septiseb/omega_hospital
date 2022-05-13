@@ -17,6 +17,16 @@ const RentaConsultorioPage = () => {
                 <div className="mb-10">
                     <MapHospital />
                 </div>
+                <footer className="bg-gray flex justify-center h-10">
+                    <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                        &copy; 2022, Omega Centro Médico.
+                        <u>
+                            <a href={require("../utils/Aviso_Privacidad_Omega.pdf")}>
+                                Aviso de Privacidad
+                            </a>
+                        </u>
+                    </p>
+                </footer>
             </div>
         </div>
     );

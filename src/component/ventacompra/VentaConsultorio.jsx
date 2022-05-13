@@ -5,7 +5,8 @@ const imgCarrousel = [
   require('../../utils/img/consultorio/omega_info.jpeg'),
   require('../../utils/img/consultorio/omega_frontal.jpeg'),
   require('../../utils/img/consultorio/consultorio.jpeg'),
-  require('../../utils/img/consultorio/consultorio_01.jpeg')
+  require('../../utils/img/consultorio/consultorio_01.jpeg'),
+  require('../../utils/img/consultorio/tercerpiso.png')
 ]
 
 const VentaConsultorio = ({children}) => {
