@@ -18,7 +18,8 @@ const VentaConsultorioPage = () => {
             <footer className="bg-gray flex justify-center h-10">
                 <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
                     &copy; 2022, Omega Centro Médico.
-                    <u>
+                    <br />
+                    <u className="text-center flex justify-center"> 
                         <a href={require("../utils/Aviso_Privacidad_Omega.pdf")}>
                             Aviso de Privacidad
                         </a>
