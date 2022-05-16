@@ -3,7 +3,7 @@ import VentaConsultorio from '../component/ventacompra/VentaConsultorio'
 import AdvVenta from '../component/ventacompra/AdvVenta'
 import ConsultoriosDetail from '../component/ventacompra/ConsultoriosDetail'
 import BubbleWhats from '../component/BubbleWhats';
-import MapHospital from '../component/landing/MapHospital';
+import MapHospital from '../component/MapHospital';
 
 
 const RentaConsultorioPage = () => {

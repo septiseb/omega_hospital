@@ -18,7 +18,7 @@ const features = [
   {
     name: 'Servicios Hospitalarios',
     description:
-      'Quirófanos, Laboratorios, Rayos X, Terapia intesiva, Área de vacunación, Ultraosnidos, UCIN y más.',
+      'Quirófanos, Laboratorios, Rayos X, Ultrasonido, Terapia intesiva, Área de vacunación, Ultraosnidos, UCIN y más.',
     icon: ColorSwatchIcon,
   },
   {

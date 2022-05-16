@@ -69,8 +69,10 @@ const VentaConsultorio = ({children}) => {
                 <span className="block">{children}</span>
                 <span className="block text-sky-700">En San Juan del Rio</span>
               </h1>
-              <h3 className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                No te quedes sin tu inversión dentro de Omega Centro Médico, <h2 className='font-extrabold text-xl'>apártalo con solo $5,000 pesos.</h2>
+              <h3 className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-4xl">
+                No pierdas la oportunidad de invertir en el Hospital Omega Centro Médico. 
+                <h2 className='font-extrabold text-xl mt-2'>Apártalo con solo $5,000 pesos.</h2> 
+                Y obtén la escrituración en Diciembre 2022.
               </h3>
             </div>
           </div>
