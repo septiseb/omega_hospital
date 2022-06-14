@@ -73,7 +73,7 @@ const GradientFeature = () => {
         </div>
       </div>
       <div className="flex justify-center -mt-16 pb-10">
-        <a href="/servicios-médicos">
+        <a href="/servicios_medicos">
         <button
           type="button"
           className="flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"

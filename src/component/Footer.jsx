@@ -100,14 +100,14 @@ const Footer = () => {
                     </div>
                     <div className="mt-12 xl:mt-0">
                         <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                            Subscribe to our newsletter
+                            Suscribirse al boletín informativo
                         </h3>
                         <p className="mt-4 text-base text-gray-400">
-                            The latest news, articles, and resources, sent to your inbox weekly.
+                            Recibiras noticias, ofertas, paquetes médicos y mucho más.
                         </p>
                         <form className="mt-4 sm:flex sm:max-w-md">
-                            <label htmlFor="email-address" className="sr-only">
-                                Email address
+                              <label htmlFor="email-address" className="sr-only">
+                                Correo
                             </label>
                             <input
                                 type="email"
@@ -123,7 +123,7 @@ const Footer = () => {
                                     type="submit"
                                     className="w-full flex items-center justify-center bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-indigo-700"
                                 >
-                                    Subscribe
+                                    Suscríbete
                                 </button>
                             </div>
                         </form>
