@@ -15,7 +15,7 @@ const footerNavigation = {
       { name: 'Venta Consultorios', href: '/venta_consultorios' },
       { name: 'Renta Consultorios', href: '/renta_consultorios' },
       { name: 'Contacto', href: '/contacto' },
-      { name: 'Artículos', href: '/articulos' }
+     // { name: 'Artículos', href: '/articulos' }
     ],
     social: [
       {
@@ -116,12 +116,12 @@ const Footer = () => {
                                 autoComplete="email"
                                 required
                                 className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-sky-600 focus:border-sky-600 focus:placeholder-gray-400"
-                                placeholder="Enter your email"
+                                placeholder="Ingresa tu correo"
                             />
                             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                                 <button
                                     type="submit"
-                                    className="w-full flex items-center justify-center bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-indigo-700"
+                                    className="w-full flex items-center justify-center bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-sky-700"
                                 >
                                     Suscríbete
                                 </button>

@@ -10,10 +10,12 @@ const MainPage = () => {
     return (
         <>
             <Nav />
-            <MainSection />
-            <GradientFeature />
-            <MapHospital />
-            <Footer />
+            <div className="mt-12" >
+                <MainSection />
+                <GradientFeature />
+                <MapHospital />
+                <Footer />
+            </div>
         </>
     );
 };

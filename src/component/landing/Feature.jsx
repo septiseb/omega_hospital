@@ -29,7 +29,7 @@ const Feature = () => {
                                 <div className="mt-6">
                                     <a
                                         href="#"
-                                        className="inline-flex bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-indigo-700"
+                                        className="inline-flex bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-sky-700"
                                     >
                                         Get started
                                     </a>
@@ -93,7 +93,7 @@ const Feature = () => {
                                 <div className="mt-6">
                                     <a
                                         href="#"
-                                        className="inline-flex bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-indigo-700"
+                                        className="inline-flex bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-sky-700"
                                     >
                                         Get started
                                     </a>

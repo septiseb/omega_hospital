@@ -13,13 +13,13 @@ const CTA = () => {
                 <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
                     <a
                         href="/"
-                        className="flex items-center justify-center bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-indigo-700"
+                        className="flex items-center justify-center bg-gradient-to-r from-sky-400 to-sky-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-sky-700 hover:to-sky-700"
                     >
                         Learn more
                     </a>
                     <a
                         href="/"
-                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
+                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-sky-800 bg-sky-50 hover:bg-sky-100"
                     >
                         Get started
                     </a>

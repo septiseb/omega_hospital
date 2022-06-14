@@ -35,11 +35,12 @@ const Nav = () => {
     return (
         <>
             <header>
-                    <Popover className="relative bg-white">
+                <nav className="relative bg-gray-100">
+                    <Popover className="relative ">
                         <div className="flex items-center max-w-7xl mx-auto px-12 py-6 sm:px-6 md:justify-center md:space-x-16 lg:px-12">
                             <div className="flex justify-end item-end pr-16">
                                 <a href="/">
-                                    <span className="sr-only">Workflow</span>
+                                    <span className="sr-only">Omega Hospital</span>
 
                                     <img
                                         className="h-10 sm:h-14"
@@ -49,8 +50,8 @@ const Nav = () => {
                                 </a>
                             </div>
                             <div className="flex justify-center -my-2 md:hidden" >
-                                <Popover.Button className="bg-white rounded-md py-4 px-8 inline-flex items-center justify-center text-gray-400 hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600">
-                                    <span className="sr-only">Open menu</span>
+                                <Popover.Button className="bg-white rounded-md py-4 px-8 inline-flex items-center justify-center text-black-400 hover:text-black-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600">
+                                    <span className="sr-only">Abrir Menu</span>
                                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                                 </Popover.Button>
                             </div>
@@ -60,15 +61,15 @@ const Nav = () => {
                                         <>
                                             <Popover.Button
                                                 className={classNames(
-                                                    open ? 'text-gray-900' : 'text-gray-400',
-                                                    'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-600'
+                                                    open ? 'text-black-900' : 'text-black-400',
+                                                    'group bg-bg-sky-200 rounded-md inline-flex items-center text-base font-medium hover:text-black-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-600'
                                                 )}
                                             >
-                                                <span>Servicios Médicos</span>
+                                                <span className="">Servicios Médicos</span>
                                                 <ChevronDownIcon
                                                     className={classNames(
-                                                        open ? 'text-gray-400' : 'text-gray-400',
-                                                        'ml-2 h-5 w-5 group-hover:text-gray-400'
+                                                        open ? 'text-black-400' : 'text-black-400',
+                                                        'ml-2 h-5 w-5 group-hover:text-black-400'
                                                     )}
                                                     aria-hidden="true"
                                                 />
@@ -85,7 +86,7 @@ const Nav = () => {
                                             >
                                                 <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                                                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                                                        <div className="relative grid gap-6 bg-sky-100 px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                                                             {solutions.map((item) => (
                                                                 <a
                                                                     key={item.name}
@@ -96,7 +97,7 @@ const Nav = () => {
                                                                         {item.icon}
                                                                     </div>
                                                                     <div className="ml-4">
-                                                                        <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                                                        <p className="text-base font-medium text-black-900">{item.name}</p>
                                                                     </div>
                                                                 </a>
                                                             ))}
@@ -108,13 +109,13 @@ const Nav = () => {
                                     )}
                                 </Popover>
 
-                                <a href="/laboratorio" className="text-base font-medium text-gray-400 hover:text-gray-900">
+                                <a href="/laboratorio" className="text-base font-medium text-black-400 hover:text-black-900">
                                     Laboratorio
                                 </a>
-                                <a href="/nosotros" className="text-base font-medium text-gray-400 hover:text-gray-900">
+                                <a href="/nosotros" className="text-base font-medium text-black-400 hover:text-black-900">
                                     Nosotros
                                 </a>
-                                <a href="/contacto" className="text-base font-medium text-gray-400 hover:text-gray-900">
+                                <a href="/contacto" className="text-base font-medium text-black-400 hover:text-black-900">
                                     Contacto
                                 </a>
                             </Popover.Group>
@@ -138,7 +139,7 @@ const Nav = () => {
                                     <div className="pt-5 pb-6 px-5">
                                         <div className="flex items-center justify-between">
                                             <div className="-mr-2">
-                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600">
+                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-black-400 hover:text-black-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600">
                                                     <span className="sr-only">Close menu</span>
                                                     <XIcon className="h-6 w-6" aria-hidden="true" />
                                                 </Popover.Button>
@@ -155,7 +156,7 @@ const Nav = () => {
                                                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-sky-400 to-sky-600 text-white">
                                                             {item.icon}
                                                         </div>
-                                                        <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
+                                                        <div className="ml-4 text-base font-medium text-black-900">{item.name}</div>
                                                     </a>
                                                 ))}
                                             </nav>
@@ -163,13 +164,13 @@ const Nav = () => {
                                     </div>
                                     <div className="py-6 px-5">
                                         <div className="grid grid-cols-2 gap-4">
-                                            <a href="/laboratorio" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                            <a href="/laboratorio" className="text-base font-medium text-black-900 hover:text-black-700">
                                                 Laboratorio
                                             </a>
-                                            <a href="/nosotros" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                            <a href="/nosotros" className="text-base font-medium text-black-900 hover:text-black-700">
                                                 Nosotros
                                             </a>
-                                            <a href="/contacto" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                            <a href="/contacto" className="text-base font-medium text-black-900 hover:text-black-700">
                                                 Contacto
                                             </a>
                                         </div>
@@ -178,8 +179,8 @@ const Nav = () => {
                             </Popover.Panel>
                         </Transition>
                     </Popover>
+                </nav>
             </header>
-
         </>
     );
 };
