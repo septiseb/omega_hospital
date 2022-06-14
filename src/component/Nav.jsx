@@ -37,13 +37,13 @@ const Nav = () => {
             <header>
                 <nav className="relative bg-gray-100">
                     <Popover className="relative ">
-                        <div className="flex items-center max-w-7xl mx-auto px-12 py-6 sm:px-6 md:justify-center md:space-x-16 lg:px-12">
+                        <div className="flex items-center max-w-7xl mx-auto px-12 py-4 sm:px-6 md:justify-center md:space-x-16 lg:px-12">
                             <div className="flex justify-end item-end pr-16">
                                 <a href="/">
                                     <span className="sr-only">Omega Hospital</span>
 
                                     <img
-                                        className="h-10 sm:h-14"
+                                        className="h-8 sm:h-12"
                                         src={require("../utils/img/omega_logo.png")}
                                         alt=""
                                     />
