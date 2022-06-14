@@ -15,18 +15,18 @@ function classNames(...classes) {
 const solutions = [
     {
         name: 'Urgencias',
-        href: '/servicios_medicos',
+        href: '/servicios_medicos#urgencia',
         icon: <Icon icon="medical-icon:i-ambulance" className="h-6 w-6" aria-hidden="true" />,
     },
     {
         name: 'Laboratorio',
-        href: '/servicios_medicos',
+        href: '/servicios_medicos#laboratorios',
         icon: <Icon icon="medical-icon:i-laboratory" className="h-6 w-6" aria-hidden="true" />,
     },
-    { name: 'Quirófano', href: '/servicios_medicos', icon: <Icon icon="medical-icon:i-surgery" className="h-6 w-6" aria-hidden="true" /> },
+    { name: 'Quirófano', href: '/servicios_medicos#quirofano', icon: <Icon icon="medical-icon:i-surgery" className="h-6 w-6" aria-hidden="true" /> },
     {
         name: 'Farmacia',
-        href: '/servicios_medicos',
+        href: '/servicios_medicos#farmacia',
         icon: <Icon icon="medical-icon:i-health-services" className="h-6 w-6" aria-hidden="true" />,
     },
 ]

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const MedicalServiceCard = ({services:{ title, description, img }, idx}) => {
+const MedicalServiceCard = ({services:{ title, description, img,id }, idx}) => {
     return (
-        <div>
+        <div id={id}>
             <div className="relative py-8 bg-white">
                 <div className="hidden absolute top-0 inset-x-0 h-1/2 bg-gray-100 lg:block" aria-hidden="true" />
                 <div className="max-w-7xl mx-auto bg-sky-400 lg:bg-transparent lg:px-8">
