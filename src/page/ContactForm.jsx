@@ -6,9 +6,11 @@ import Footer from '../component/Footer';
 const ContactFormPage = () => {
     return (
         <>
-        <Nav />
-        <ContactForm />
-        <Footer />
+            <Nav />
+            <div className="py-8">
+                <ContactForm />
+            </div>
+            <Footer />
         </>
     );
 };
