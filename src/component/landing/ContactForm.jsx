@@ -97,7 +97,7 @@ const ContactForm = () => {
                   className="block w-full shadow-sm sm:text-sm focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md"
                   >
                     <option value="volvo">Cita</option>
-                    <option value="saab">Comentario sobre ser</option>
+                    <option value="saab">Comentario sobre servicio</option>
                     <option value="fiat">Cotización</option>
                     <option value="audi">Aseguradora</option>
                     <option value="audi">Otros</option>
