@@ -38,7 +38,7 @@ const MedicalServiceCard = ({ services: { title, description, img }, idx }) => {
                                         height={20}
                                         patternUnits="userSpaceOnUse"
                                     >
-                                        <rect x={0} y={0} width={4} height={4} className="text-sky-500 text-transparent" fill="currentColor" />
+                                        <rect x={0} y={0} width={4} height={4} className="text-sky-600 text-transparent" fill="currentColor" />
                                     </pattern>
                                 </defs>
                                 <rect width={404} height={384} fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
@@ -60,7 +60,7 @@ const MedicalServiceCard = ({ services: { title, description, img }, idx }) => {
                                         height={20}
                                         patternUnits="userSpaceOnUse"
                                     >
-                                        <rect x={0} y={0} width={4} height={4} className="text-red-500 text-transparent" fill="currentColor" />
+                                        <rect x={0} y={0} width={4} height={4} className="text-sky-600 text-transparent" fill="currentColor" />
                                     </pattern>
                                 </defs>
                                 <rect width={404} height={384} fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
