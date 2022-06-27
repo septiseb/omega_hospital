@@ -11,8 +11,8 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-const Carrousel = ({children,interval}) => { 
-  
+const Carrousel = ({ children, interval }) => {
+
   return (
     <>
         <Swiper
@@ -29,10 +29,11 @@ const Carrousel = ({children,interval}) => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          {children.map((sl,idx)=>(
-            <SwiperSlide key={idx}>{sl}</SwiperSlide>
+          {children.map((sl, idx) => (
+            <SwiperSlide key={idx} className="flex" >
+              {sl}
+            </SwiperSlide>
           ))}
-          
         </Swiper>
     </>
   );
