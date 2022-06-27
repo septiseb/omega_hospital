@@ -11,7 +11,7 @@ const services = [
     }, {
         id: "uci", title: "Terapia Intensiva", description: "Brindamos atención a pacientes que tienen alguna condición de salud que pone en riesgo la vida y por tal razón necesitan control y monitorización permanente.", img: require("../../utils/img/servicios/uci.jpeg")
     }, {
-        id: "pediatria", title: "   ", description: " Ofrecemos la especialdiad médica enfocada en la salud y las enfermedades de los niños. Se trata de una especialidad médica que se centra en los pacientes desde el momento del nacimiento hasta la adolescencia, sin que exista un límite preciso que determine el final de su validez.", img: require("../../utils/img/servicios/pediatria.jpeg")
+        id: "pediatria", title: "Pediatría", description: " Ofrecemos la especialdiad médica enfocada en la salud y las enfermedades de los niños. Se trata de una especialidad médica que se centra en los pacientes desde el momento del nacimiento hasta la adolescencia, sin que exista un límite preciso que determine el final de su validez.", img: require("../../utils/img/servicios/pediatria.jpeg")
     }, {
         id: "ginecologia", title: "Ginecología y Obstetricia", description: "Contamos con la especialidad médica que se especializa en brindar atención a las mujeres a lo largo de su vida, incluyendo el embarazo y el parto, además brindan diagnósticos y tratamientos para enfermedades de los órganos reproductores femeninos.", img: require("../../utils/img/servicios/gine.jpeg")
     }, {
