@@ -36,6 +36,7 @@ const Nav = () => {
         <>
             <header>
                 <nav className="relative bg-gray-100">
+
                     <Popover className="relative ">
                         <div className="flex items-center max-w-7xl mx-auto px-12 py-4 sm:px-6 md:justify-center md:space-x-16 lg:px-12">
                             <div className="flex justify-end item-end pr-16">
@@ -48,6 +49,7 @@ const Nav = () => {
                                         alt=""
                                     />
                                 </a>
+
                             </div>
                             <div className="flex justify-center -my-2 md:hidden" >
                                 <Popover.Button className="bg-white rounded-md py-4 px-8 inline-flex items-center justify-center text-black-400 hover:text-black-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600">
@@ -56,15 +58,19 @@ const Nav = () => {
                                 </Popover.Button>
                             </div>
                             <Popover.Group as="nav" className="flex justify-center hidden md:flex space-x-10">
+                                <a href="/" className="text-base font-medium text-black-400 hover:text-black-900">
+                                    Inicio
+                                </a>
                                 <Popover className="relative">
                                     {({ open }) => (
                                         <>
                                             <Popover.Button
                                                 className={classNames(
                                                     open ? 'text-black-900' : 'text-black-400',
-                                                    'group bg-bg-sky-200 rounded-md inline-flex items-center text-base font-medium hover:text-black-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-600'
+                                                    'group rounded-md inline-flex items-center text-base font-medium hover:text-black-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-600'
                                                 )}
                                             >
+
                                                 <span className="">Servicios Médicos</span>
                                                 <ChevronDownIcon
                                                     className={classNames(
@@ -86,7 +92,7 @@ const Nav = () => {
                                             >
                                                 <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                                                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                                        <div className="relative grid gap-6 bg-sky-100 px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                                                        <div className="relative grid gap-6 bg-gray-100 px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                                                             {solutions.map((item) => (
                                                                 <a
                                                                     key={item.name}
@@ -147,6 +153,7 @@ const Nav = () => {
                                         </div>
                                         <div className="mt-6">
                                             <nav className="grid grid-cols-1 gap-7">
+
                                                 {solutions.map((item) => (
                                                     <a
                                                         key={item.name}

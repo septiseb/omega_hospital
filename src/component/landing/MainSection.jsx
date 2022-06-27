@@ -3,7 +3,9 @@ import Carrousel from '../Carousel';
 
 const MainSection = () => {
     let imgArr = [require("../../utils/img/portada_logo.jpg")
-        , require("../../utils/img/portada_logo.jpg")]
+        , require("../../utils/img/mainSlider/servicios_apertura.jpeg")]
+
+        
     return (
         <div className="relative h-1/2">
             <div className="absolute inset-x-0 bottom-0" />
