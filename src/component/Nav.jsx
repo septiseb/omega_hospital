@@ -115,12 +115,14 @@ const Nav = () => {
                                     )}
                                 </Popover>
 
+                                {/*
                                 <a href="/laboratorio" className="text-base font-medium text-black-400 hover:text-black-900">
                                     Laboratorio
                                 </a>
                                 <a href="/nosotros" className="text-base font-medium text-black-400 hover:text-black-900">
                                     Nosotros
                                 </a>
+                                                            */}
                                 <a href="/contacto" className="text-base font-medium text-black-400 hover:text-black-900">
                                     Contacto
                                 </a>
@@ -171,12 +173,14 @@ const Nav = () => {
                                     </div>
                                     <div className="py-6 px-5">
                                         <div className="grid grid-cols-2 gap-4">
+                                            {/*
                                             <a href="/laboratorio" className="text-base font-medium text-black-900 hover:text-black-700">
                                                 Laboratorio
                                             </a>
                                             <a href="/nosotros" className="text-base font-medium text-black-900 hover:text-black-700">
                                                 Nosotros
                                             </a>
+                                                */}
                                             <a href="/contacto" className="text-base font-medium text-black-900 hover:text-black-700">
                                                 Contacto
                                             </a>
