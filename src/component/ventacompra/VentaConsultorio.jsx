@@ -13,7 +13,7 @@ const VentaConsultorio = ({children}) => {
 
 
   return (
-    <div className="bg-gray-50 -mt-10">
+    <div className="bg-gray-50 -mt-24">
       <div className="relative overflow-hidden">
         <div className="absolute inset-y-0 h-full w-full" aria-hidden="true">
           <div className="relative h-full">
@@ -83,7 +83,7 @@ const VentaConsultorio = ({children}) => {
             <div className="flex-1" />
             <div className="flex-1 w-full bg-sky-700" />
           </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 -mt-16 w-1/2">
             <Carrousel interval={8000}>
               {imgCarrousel.map(im => (<img
                 className="relative rounded-lg shadow-lg"

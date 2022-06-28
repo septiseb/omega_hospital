@@ -25,6 +25,7 @@ const App = () => {
         <Route exact path='/servicios_medicos' element={<ServiciosMedicosPage />} />
         <Route exact path='/laboratorio' element={<LaboratorioPage />} />
         <Route exact path='/nosotros' element={<NosotrosPage />} />
+        <Route exact path='/directorio_medico' element={<RentaConsultorioPage />} />
         <Route exact path='/contacto' element={<ContactFormPage />} />
       </Routes>
     </Router>
