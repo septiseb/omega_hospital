@@ -1,35 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { CashIcon, OfficeBuildingIcon, CreditCardIcon, ColorSwatchIcon } from '@heroicons/react/outline'
 import React from 'react';
 
 
-const features = [
-  {
-    name: 'Retorno de inversión',
-    description: 'Asegurado. Invertir en Salud hoy es una certeza. Gana plusvalía desde hoy.',
-    icon: CashIcon,
-  },
-  {
-    name: 'Infraestrucutra del Hospital',
-    description:
-      'Farmacia, Estacionamiento, Urgencias, Nutrición y Hospitalización.',
-    icon: OfficeBuildingIcon,
-  },
-  {
-    name: 'Servicios Hospitalarios',
-    description:
-      'Quirófanos, Laboratorios, Rayos X, Ultrasonido, Terapia intesiva, Área de vacunación, Ultraosnidos, UCIN y más.',
-    icon: ColorSwatchIcon,
-  },
-  {
-    name: 'Obtén Crédito',
-    description:
-      'Aplica y obten un crédito a 5 años con Santander. Obtén flujo de efectivo positivo a partir de que se rente tu consultorio.',
-    icon: CreditCardIcon,
-  },
-]
-
-const AdVenta = ()=> {
+const AdVenta = ({title,features})=> {
   return (
     <div className="bg-gray-50 overflow-hidden">
       <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -59,7 +32,7 @@ const AdVenta = ()=> {
         <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
           <div className="lg:col-span-1">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            5 VENTAJAS DE TENER CONSULTORIO EN OMEGA CENTRO MÉDICO.
+            {title}
             </h2>
           </div>
           <dl className="mt-10 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:mt-0 lg:col-span-2">

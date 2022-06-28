@@ -4,30 +4,81 @@ import AdvVenta from '../component/ventacompra/AdvVenta'
 import ConsultoriosDetail from '../component/ventacompra/ConsultoriosDetail'
 import BubbleWhats from '../component/BubbleWhats';
 import MapHospital from '../component/MapHospital';
+import { CashIcon, OfficeBuildingIcon, CreditCardIcon, ColorSwatchIcon, CurrencyDollarIcon, EmojiHappyIcon } from '@heroicons/react/outline'
+
+
+const features = [
+    {
+      name: 'Gran Retorno de Inversión',
+      description: 'Invierte en bienes raices y haz rendir tu capital adquiriendo un consultorio en una zona gran plusvalía con la opción a ofrecerlo en renta.',
+      icon: CashIcon,
+    },
+    {
+      name: 'Opciones Flexibles de Compra',
+      description:
+        'Aplica a un crédito de hasta 5 años con Santander, y logra obtener flujo de efectivo positivo a partir de que se ocupe el consultorio.',
+      icon: CashIcon,
+    },
+    {
+      name: 'Amplio Catálogo de Servicios Hospitalarios',
+      description:
+        'Mejora la cobertura del consultorio con quirófanos, laboratorios, rayos X, terapia intesiva, área de vacunación, ultrasonidos, UCIN y más.',
+      icon: ColorSwatchIcon,
+    },
+    {
+      name: 'Instalaciones de Primer Nivel',
+      description:
+        'Accede a instalaciones modernas y amenidades más cómodas, pensadas en brindar la máxima ergonomía para los médicos y sus pacientes.',
+      icon: OfficeBuildingIcon,
+    },
+    {
+        name: 'Flexibilidad de Presupuesto',
+        description:
+          'Elimina la pesada carga de una inversión en bienes raices y accede a un modelo de renta para dar más flexibilidad a tu presupuesto.',
+        icon: EmojiHappyIcon
+      },
+      {
+        name: 'Beneficios Fiscales',
+        description:
+          'Tranfiere el pago de la renta de tu consultorio médico a tus gastos operacionales y disminuye la carga fiscal de tus obligaciones.',
+        icon: CurrencyDollarIcon,
+      }
+  ]
 
 
 const RentaConsultorioPage = () => {
     return (
         <div>
             <div>
-                <VentaConsultorio>Te Rentamos tus Consultorios</VentaConsultorio>
-                <AdvVenta />
-                <ConsultoriosDetail />
+                <VentaConsultorio
+                    subtitle="Impulsa tu patrimonio y aumenta el impacto de tus servicios médicos en los consultorios de Omega Centro Médico."
+                    benefit={["Pregunta por la disponibilidad y opciones de renta."]}
+                >
+                    Renta de consultorios
+                </VentaConsultorio>
+                <AdvVenta
+                    title="¿Por qué rentar un consultorio en Omega Centro Médico?"
+                    features={features}
+                />
+                <ConsultoriosDetail 
+                title="Conoce los consultorios médicos en renta"
+                subtitle="Descubre y elige el consultorio médico que mejor se adapte a tus necesidades:"
+                />
                 <BubbleWhats />
                 <div className="mb-10">
                     <MapHospital />
                 </div>
                 <footer className="bg-gray flex justify-center h-10">
-                    <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                        &copy; 2022, Omega Centro Médico. <br />
-                        <u>
-            
-                            <a href={require("../utils/Aviso_Privacidad_Omega.pdf")}>
-                                Aviso de Privacidad
-                            </a>
-                        </u>
-                    </p>
-                </footer>
+                <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2022, Omega Centro Médico.
+                    <br />
+                    <u className="text-center flex justify-center">
+                        <a href={require("../utils/Aviso_Privacidad_Omega.pdf")}>
+                            Aviso de Privacidad
+                        </a>
+                    </u>
+                </p>
+            </footer>
             </div>
         </div>
     );

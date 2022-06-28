@@ -58,7 +58,7 @@ const consultorio = [
     }
 ]
 
-const ConsultorioDetail = () => {
+const ConsultorioDetail = ({title,subtitle}) => {
     return (
         <div className="bg-white">
             <div className="relative overflow-hidden">
@@ -109,12 +109,12 @@ const ConsultorioDetail = () => {
                     </div>
                 </div>
 
-                <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+                <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24 z-0">
                     <div className="space-y-12">
-                        <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-                            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Conoce los consultorios disponibles</h2>
-                            <p className="text-xl text-gray-500">
-                                Tenemos una variedad de consultorios que se ajustan a tus necesidades, aprovecha nuestra preventa para obtener mejores precios.
+                        <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none z-40">
+                            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">{title}</h2>
+                            <p className="text-xl text-gray-500 -z-10">
+                                {subtitle}
                             </p>
                         </div>
                         <ul

@@ -9,8 +9,9 @@ const imgCarrousel = [
   //require('../../utils/img/consultorio/tercerpiso.png')
 ]
 
-const VentaConsultorio = ({children}) => {
+const VentaConsultorio = ({children,subtitle,benefit}) => {
 
+  const [benefitOne,benefitTwo] = benefit
 
   return (
     <div className="bg-gray-50 -mt-24">
@@ -67,12 +68,12 @@ const VentaConsultorio = ({children}) => {
             <div className="text-center">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block">{children}</span>
-                <span className="block text-sky-700">En San Juan del Rio</span>
+                <span className="block text-sky-700">En San Juan del Rio, Qro</span>
               </h1>
               <h3 className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-4xl">
-                No pierdas la oportunidad de invertir en el Hospital Omega Centro Médico. 
-                <h2 className='font-extrabold text-xl mt-2'>Apártalo con solo $5,000 pesos.</h2> 
-                Y obtén la escrituración en Diciembre 2022.
+                {subtitle}
+                <h2 className='font-extrabold text-xl mt-2'>{benefitOne}<br/>{benefitTwo}</h2> 
+                
               </h3>
             </div>
           </div>
