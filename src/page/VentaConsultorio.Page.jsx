@@ -5,11 +5,12 @@ import ConsultoriosDetail from '../component/ventacompra/ConsultoriosDetail'
 import BubbleWhats from '../component/BubbleWhats';
 import MapHospital from '../component/MapHospital';
 import { MapIcon,CashIcon, OfficeBuildingIcon, CreditCardIcon, ColorSwatchIcon, CheckCircleIcon } from '@heroicons/react/outline'
+import Seo from '../component/SEO';
 
 const features = [
     {
       name: 'Gran Retorno de Inversión',
-      description: 'Invierte en bienes raices y haz rendir tu capital adquiriendo un consultorio en una zona gran plusvalía con la opción a ofrecerlo en renta.',
+      description: 'Invierte en bienes raices y haz rendir tu capital adquiriendo un consultorio en una zona gran plusvalía con la opción a ofrecerlo en Venta.',
       icon: CashIcon,
     },
     {
@@ -44,9 +45,17 @@ const features = [
       }
   ]
 
+const keywords = ["Venta de consultorios", "Venta de consultorio", "Venta de consultorio medico", "Venta de consultorio en hospital", "Venta de consultorio en querétaro", "Venta de consultorio en san juan", "Venta de consultorio en san juan del rio", "Alquiler de consultorio", "Alquiler de consultorio médico", "Alquiler de consultorio en hospital", "Alquiler de consultorio en querétaro", "Alquiler de consultorio en san juan", "Alquiler de consultorio en san juan del rio", "Alquiler de consultorio dental", "Alquiler de consultorio odontologico", "Alquiler de consultorio amueblado"]
+
 const VentaConsultorioPage = () => {
     return (
         <div>
+            <Seo  
+            title="Venta de consultorios médicos | Instalaciones de primera y la mejor ubicación"
+            description="Venta de consultorios médicos en Querétaro. Gran oportunidad de inversión en uno de los Centro Médicos más modernos del estado. Programa una llamada con nuestros agentes."
+             pathSlug="venta_consultorios"
+             keywords={keywords}
+             />
             <VentaConsultorio 
             subtitle="Invierte en los consultorios médicos más modernos de Querétaro y haz crecer  tu patrimonio con Omega Centro Médico."
             benefit={["¡Apártalo con tan solo $5,000 pesos!","Y obtén la escrituración en Diciembre 2022."]}

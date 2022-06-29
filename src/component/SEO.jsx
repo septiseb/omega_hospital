@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import React from 'react';
 const Seo = ({ title, description, pathSlug, keywords }) => {
-  const url = `https://malikgabroun.com/${pathSlug}`
+  const url = `https://omegacentromedico.com/${pathSlug}`
 	return (
 <Helmet htmlAttributes={{ lang: 'es' }} title={title} meta={[
         {
