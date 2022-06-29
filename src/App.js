@@ -12,6 +12,7 @@ import NosotrosPage from './page/NosotrosPage';
 import RentaConsultorioPage from './page/RentaConsultorio.Page';
 import ServiciosMedicosPage from './page/ServiciosMedicosPage';
 import VentaConsultorioPage from './page/VentaConsultorio.Page';
+import DirectorioMedico from './page/DirectorioMedico';
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Route exact path='/servicios_medicos' element={<ServiciosMedicosPage />} />
         <Route exact path='/laboratorio' element={<LaboratorioPage />} />
         <Route exact path='/nosotros' element={<NosotrosPage />} />
-        <Route exact path='/directorio_medico' element={<RentaConsultorioPage />} />
+        <Route exact path='/directorio_medico' element={<DirectorioMedico />} />
         <Route exact path='/contacto' element={<ContactFormPage />} />
       </Routes>
     </Router>

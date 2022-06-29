@@ -2,14 +2,14 @@ import React from 'react';
 
 const footerNavigation = {
     servicios: [
-      { name: 'Quirófano', href: '/servicios_medicos' },
-      { name: 'Urgencias', href: '/servicios_medicos' },
-      { name: 'Farmacia', href: '/servicios_medicos' },
-      { name: 'Imágen', href: '/servicios_medicos' },
+      { name: 'Quirófano', href: '/servicios_medicos#quirofano' },
+      { name: 'Urgencias', href: '/servicios_medicos#urgencias' },
+      { name: 'Farmacia', href: '/servicios_medicos#farmacia' },
+      { name: 'Traumatología', href: '/servicios_medicos#traumatologia' },
     ],
     hospital: [
       { name: 'Laboratorio', href: '/laboratorio' },
-      { name: 'Directorio Médico', href: '/' },
+      { name: 'Directorio Médico', href: '/directorio_medico' },
     ],
     otros: [
       { name: 'Venta Consultorios', href: '/venta_consultorios' },
