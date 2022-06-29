@@ -4,21 +4,21 @@ import AdvVenta from '../component/ventacompra/AdvVenta'
 import ConsultoriosDetail from '../component/ventacompra/ConsultoriosDetail'
 import BubbleWhats from '../component/BubbleWhats';
 import MapHospital from '../component/MapHospital';
-import { CashIcon, OfficeBuildingIcon, CreditCardIcon, ColorSwatchIcon, CurrencyDollarIcon, EmojiHappyIcon } from '@heroicons/react/outline'
+import {  OfficeBuildingIcon, ColorSwatchIcon, CurrencyDollarIcon, EmojiHappyIcon, CheckCircleIcon, MapIcon } from '@heroicons/react/outline'
 import Seo from '../component/SEO';
 
 
 const features = [
   {
-    name: 'Gran Retorno de Inversión',
-    description: 'Invierte en bienes raices y haz rendir tu capital adquiriendo un consultorio en una zona gran plusvalía con la opción a ofrecerlo en renta.',
-    icon: CashIcon,
+    name: 'Ubicación Privilegiada y de Alta Afluencia',
+    description: 'Garantiza el máximo alcance de tus servicios médicos adquiriendo un consultorio en una zona con alta afluencia y gran accesibilidad vehicular.',
+    icon: MapIcon,
   },
   {
-    name: 'Opciones Flexibles de Compra',
+    name: 'Terminados de Alta Calidad y Durabilidad',
     description:
-      'Aplica a un crédito de hasta 5 años con Santander, y logra obtener flujo de efectivo positivo a partir de que se ocupe el consultorio.',
-    icon: CashIcon,
+      'Brinda más valor a pacientes con un consultorio de excelentes terminados y accesorios de gran nivel que mejoren la percepción de tus servicios.',
+    icon: CheckCircleIcon,
   },
   {
     name: 'Amplio Catálogo de Servicios Hospitalarios',
