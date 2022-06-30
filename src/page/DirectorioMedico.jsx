@@ -4,12 +4,12 @@ import Nav from '../component/Nav';
 import FilterTab from '../component/directoriomedico/FilterTab'
 import DoctorCard from '../component/directoriomedico/DoctorCard'
 
+
 const DirectorioMedico = () => {
     return (
         <>
             <Nav />
             <FilterTab />
-            <DoctorCard />
             <Footer />
         </>
     );

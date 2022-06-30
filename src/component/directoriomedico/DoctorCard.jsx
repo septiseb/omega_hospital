@@ -1,66 +1,14 @@
 import React from 'react';
 import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
 
-const people = [
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
-    }
-    // More people...
-]
 
-const DoctorCard = () => {
+
+const DoctorCard = ({people}) => {
     return (
         <>
             <ul className="mx-8 my-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {people.map((person) => (
-                    <li key={person.email} className="col-span-1 bg-white rounded-lg border-sky-200 border shadow divide-y divide-gray-200">
+                {people.map((person,idx) => (
+                    <li key={idx} className="col-span-1 bg-white rounded-lg border-sky-200 border shadow divide-y divide-gray-200">
                         <div className="w-full flex items-center justify-between p-6 space-x-6">
                             <img className="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" src={person.imageUrl} alt="" />
 
