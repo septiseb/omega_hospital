@@ -8,7 +8,7 @@ const people = [
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
+        Especialidad: 'Traumatologo',
         SubEspecialidad: 'Rodilla',
         Descripción: '',
         imageUrl:
@@ -18,7 +18,7 @@ const people = [
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
+        Especialidad: 'Traumatologo',
         SubEspecialidad: 'Rodilla',
         Descripción: '',
         imageUrl:
@@ -28,8 +28,8 @@ const people = [
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
+        Especialidad: 'Ortopedista',
+        SubEspecialidad: 'Cadera',
         Descripción: '',
         imageUrl:
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -38,8 +38,8 @@ const people = [
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
+        Especialidad: 'Ortopedista',
+        SubEspecialidad: 'Cadera',
         Descripción: '',
         imageUrl:
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -48,8 +48,8 @@ const people = [
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Espcialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
+        Especialidad: 'Ortopedista',
+        SubEspecialidad: 'Cadera',
         Descripción: '',
         imageUrl:
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -63,9 +63,9 @@ const filtersOption = [
         id: 'especialidad',
         name: 'Especialidad',
         options: [
-            { value: 'new-arrivals', label: 'All New Arrivals', checked: false },
-            { value: 'tees', label: 'Tees', checked: false },
-            { value: 'objects', label: 'Objects', checked: false },
+            { value: 'ortopedista', label: 'Ortopedista', checked: false },
+            { value: 'traumatologo', label: 'Traumatologo', checked: false },
+            { value: 'objects', label: '    Objects', checked: false },
         ],
     },
     {
@@ -89,17 +89,26 @@ const FilterTab = () => {
     const [open, setOpen] = useState(false)
     const [filters, setFilters] = useState(filtersOption)
 
-    const handleChange = ({ target: { name, value } }) => {
+    const handleChange = (e) => {
         setFilters(prevFilters => prevFilters.map(filter => {
-            if (filter.id === name) {
-
-                let options = filter.options.map(option => option.value === value ? { ...option, checked: !option.checked } : option)
+            if (filter.id === e.target.name) {
+                let options = filter.options.map(option => option.value === e.target.value ? { ...option, checked: !option.checked } : option)
                 console.log(options)
-                return { ...filter, options: options }
+                return { ...filter, options}
             }
             return filter
         })
         )
+    }
+    
+    const onDelete= (obj) =>{
+        setFilters(prevFilters=>prevFilters.map(filter=>{
+            if(filter.options.map(opt=>opt.name).includes(obj.name)){
+                let options = filter.options.map(option => option.label === obj.label ? { ...option, checked: !option.checked } : option)
+                return { ...filter, options}
+            }
+        return filter
+        }))
     }
 
     const actFilter = filters.map(filter=>filter.options).flat().filter(filter=>filter.checked)
@@ -299,7 +308,7 @@ const FilterTab = () => {
                                             <button
                                                 type="button"
                                                 className="flex-shrink-0 ml-1 h-4 w-4 p-1 rounded-full inline-flex text-gray-400 hover:bg-gray-200 hover:text-gray-500"
-                                                onClick={console.log}
+                                                onClick={()=>onDelete(activeFilter)}
                                             >
                                                 <span className="sr-only">Remover filtro para {activeFilter.label}</span>
                                                 <svg className="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
@@ -315,7 +324,12 @@ const FilterTab = () => {
                 </section>
             </div >
             <DoctorCard
-                people={people}
+                people={people.filter(p=>{
+                    const activeLabels = actFilter.map(f=>f.label)
+                    console.log(activeLabels.includes(p.Especialidad))
+                    return  activeLabels.length ? activeLabels.includes(p.Especialidad) : true
+                })
+            }
             />
         </>
     )
