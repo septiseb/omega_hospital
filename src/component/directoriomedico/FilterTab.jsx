@@ -3,6 +3,10 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import DoctorCard from './DoctorCard';
+import { getDirectory } from '../../services/api/sheets';
+import { transformArray,transformFilter } from '../../services/functions/googleTransform';
+import { useEffect } from 'react';
+
 
 const people = [
     {
@@ -11,9 +15,11 @@ const people = [
         Especialidad: 'Traumatologo',
         SubEspecialidad: 'Rodilla',
         Descripción: '',
+        Telefono:'',
+        Extension:'',
+        Consultorio:'',
         imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
     },
     {
         Nombre: 'Jane',
@@ -21,39 +27,51 @@ const people = [
         Especialidad: 'Traumatologo',
         SubEspecialidad: 'Rodilla',
         Descripción: '',
+        Telefono:'',
+        Extension:'',
+        Consultorio:'',
         imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
+
     },
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Especialidad: 'Ortopedista',
-        SubEspecialidad: 'Cadera',
+        Especialidad: 'Traumatologo',
+        SubEspecialidad: 'Rodilla',
         Descripción: '',
+        Telefono:'',
+        Extension:'',
+        Consultorio:'',
         imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
+
     },
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Especialidad: 'Ortopedista',
-        SubEspecialidad: 'Cadera',
+        Especialidad: 'Traumatologo',
+        SubEspecialidad: 'Rodilla',
         Descripción: '',
+        Telefono:'',
+        Extension:'',
+        Consultorio:'',
         imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
+
     },
     {
         Nombre: 'Jane',
         Apellido: 'Cooper',
-        Especialidad: 'Ortopedista',
-        SubEspecialidad: 'Cadera',
+        Especialidad: 'Traumatologo',
+        SubEspecialidad: 'Rodilla',
         Descripción: '',
+        Telefono:'',
+        Extension:'',
+        Consultorio:'',
         imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-        Consultorio: "205"
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
+
     }
     // More people...
 ]
@@ -88,6 +106,7 @@ function classNames(...classes) {
 const FilterTab = () => {
     const [open, setOpen] = useState(false)
     const [filters, setFilters] = useState(filtersOption)
+    const [doctors,setDoctors] = useState([])
 
     const handleChange = (e) => {
         setFilters(prevFilters => prevFilters.map(filter => {
@@ -110,6 +129,15 @@ const FilterTab = () => {
         return filter
         }))
     }
+
+    useEffect(()=>{
+        getDirectory().then(r=>{
+            const directory = transformArray(r.data.values)
+            const filterOption = transformFilter(directory,['Especialidad','SubEspecialidad'])
+            setDoctors(directory)
+            setFilters(filterOption)
+        })
+    },[])
 
     const actFilter = filters.map(filter=>filter.options).flat().filter(filter=>filter.checked)
 
@@ -324,10 +352,9 @@ const FilterTab = () => {
                 </section>
             </div >
             <DoctorCard
-                people={people.filter(p=>{
+                people={doctors .filter(d=>{
                     const activeLabels = actFilter.map(f=>f.label)
-                    console.log(activeLabels.includes(p.Especialidad))
-                    return  activeLabels.length ? activeLabels.includes(p.Especialidad) : true
+                    return  activeLabels.length ? activeLabels.includes(d.Especialidad) || activeLabels.includes(d.SubEspecialidad) : true
                 })
             }
             />

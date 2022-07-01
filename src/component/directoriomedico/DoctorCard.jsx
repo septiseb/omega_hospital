@@ -19,7 +19,7 @@ const DoctorCard = ({people}) => {
                                         {person.Consultorio}
                                     </span>
                                 </div>
-                                <p className="mt-1 text-gray-500 text-sm truncate">{person.Espcialidad}</p>
+                                <p className="mt-1 text-gray-500 text-sm truncate">{person.Especialidad}</p>
                             </div>
 
                         </div>
