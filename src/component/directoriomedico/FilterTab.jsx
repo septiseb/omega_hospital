@@ -37,7 +37,7 @@ const FilterTab = () => {
     useEffect(() => {
         getDirectory().then(r => {
             const directory = transformArray(r.data.values)
-            const filterOption = transformFilter(directory, ['Especialidad', 'SubEspecialidad'])
+            const filterOption = transformFilter(directory, ['Especialidad', 'Subespecialidad'])
             setDoctors(directory)
             setFilters(filterOption)
         })
