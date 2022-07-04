@@ -4,142 +4,46 @@ import { XIcon } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import DoctorCard from './DoctorCard';
 import { getDirectory } from '../../services/api/sheets';
-import { transformArray,transformFilter } from '../../services/functions/googleTransform';
+import { transformArray, transformFilter } from '../../services/functions/googleTransform';
 import { useEffect } from 'react';
-
-
-const people = [
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Especialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        Telefono:'',
-        Extension:'',
-        Consultorio:'',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Especialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        Telefono:'',
-        Extension:'',
-        Consultorio:'',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
-
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Especialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        Telefono:'',
-        Extension:'',
-        Consultorio:'',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
-
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Especialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        Telefono:'',
-        Extension:'',
-        Consultorio:'',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
-
-    },
-    {
-        Nombre: 'Jane',
-        Apellido: 'Cooper',
-        Especialidad: 'Traumatologo',
-        SubEspecialidad: 'Rodilla',
-        Descripción: '',
-        Telefono:'',
-        Extension:'',
-        Consultorio:'',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
-
-    }
-    // More people...
-]
-
-const filtersOption = [
-    {
-        id: 'especialidad',
-        name: 'Especialidad',
-        options: [
-            { value: 'ortopedista', label: 'Ortopedista', checked: false },
-            { value: 'traumatologo', label: 'Traumatologo', checked: false },
-            { value: 'objects', label: '    Objects', checked: false },
-        ],
-    },
-    {
-        id: 'subespecialidad',
-        name: 'Subespecialidad',
-        options: [
-            { value: 'white', label: 'White', checked: false },
-            { value: 'beige', label: 'Beige', checked: false },
-            { value: 'blue', label: 'Blue', checked: false },
-        ],
-    }
-]
-
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-
+import { classNames } from '../../services/functions/textFormat';
 
 const FilterTab = () => {
     const [open, setOpen] = useState(false)
-    const [filters, setFilters] = useState(filtersOption)
-    const [doctors,setDoctors] = useState([])
+    const [filters, setFilters] = useState([])
+    const [doctors, setDoctors] = useState([])
 
     const handleChange = (e) => {
         setFilters(prevFilters => prevFilters.map(filter => {
             if (filter.id === e.target.name) {
                 let options = filter.options.map(option => option.value === e.target.value ? { ...option, checked: !option.checked } : option)
-                console.log(options)
-                return { ...filter, options}
+                return { ...filter, options }
             }
             return filter
         })
         )
     }
-    
-    const onDelete= (obj) =>{
-        setFilters(prevFilters=>prevFilters.map(filter=>{
-            if(filter.options.map(opt=>opt.name).includes(obj.name)){
+
+    const onDelete = (obj) => {
+        setFilters(prevFilters => prevFilters.map(filter => {
+            if (filter.options.map(opt => opt.name).includes(obj.name)) {
                 let options = filter.options.map(option => option.label === obj.label ? { ...option, checked: !option.checked } : option)
-                return { ...filter, options}
+                return { ...filter, options }
             }
-        return filter
+            return filter
         }))
     }
 
-    useEffect(()=>{
-        getDirectory().then(r=>{
+    useEffect(() => {
+        getDirectory().then(r => {
             const directory = transformArray(r.data.values)
-            const filterOption = transformFilter(directory,['Especialidad','SubEspecialidad'])
+            const filterOption = transformFilter(directory, ['Especialidad', 'SubEspecialidad'])
             setDoctors(directory)
             setFilters(filterOption)
         })
-    },[])
+    }, [])
 
-    const actFilter = filters.map(filter=>filter.options).flat().filter(filter=>filter.checked)
+    const actFilter = filters.map(filter => filter.options).flat().filter(filter => filter.checked)
 
     return (
         <>
@@ -336,7 +240,7 @@ const FilterTab = () => {
                                             <button
                                                 type="button"
                                                 className="flex-shrink-0 ml-1 h-4 w-4 p-1 rounded-full inline-flex text-gray-400 hover:bg-gray-200 hover:text-gray-500"
-                                                onClick={()=>onDelete(activeFilter)}
+                                                onClick={() => onDelete(activeFilter)}
                                             >
                                                 <span className="sr-only">Remover filtro para {activeFilter.label}</span>
                                                 <svg className="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
@@ -352,11 +256,21 @@ const FilterTab = () => {
                 </section>
             </div >
             <DoctorCard
-                people={doctors .filter(d=>{
-                    const activeLabels = actFilter.map(f=>f.label)
-                    return  activeLabels.length ? activeLabels.includes(d.Especialidad) || activeLabels.includes(d.SubEspecialidad) : true
+                people={doctors.filter(doctor => {
+                    const filter = filters.reduce((ac, cv, i) => {
+                        ac[cv.name] = cv.options.filter(f => f.checked).map(f => f.label)
+                        return ac
+                    }, {})
+
+                    for (var key in filter) {
+                        if (!filter[key].length) continue
+                        if (doctor[key] === undefined || !filter[key].includes(doctor[key]))
+                            return false;
+                    }
+                    return true;
                 })
-            }
+                }
+
             />
         </>
     )
