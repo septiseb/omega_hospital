@@ -114,7 +114,7 @@ const FilterTab = () => {
                                                                             type="checkbox"
                                                                             onChange={handleChange}
                                                                             defaultChecked={option.checked}
-                                                                            className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                                                                            className="h-4 w-4 border-gray-300 rounded text-sky-600 focus:ring-sky-500"
                                                                         />
                                                                         <label
                                                                             htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
@@ -198,7 +198,7 @@ const FilterTab = () => {
                                                                         type="checkbox"
                                                                         onChange={handleChange}
                                                                         defaultChecked={option.checked}
-                                                                        className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                                                                        className="h-4 w-4 border-gray-300 rounded text-sky-600 focus:ring-sky-500"
                                                                     />
                                                                     <label
                                                                         htmlFor={`filter-${section.id}-${optionIdx}`}
@@ -256,7 +256,7 @@ const FilterTab = () => {
                 </section>
             </div >
             <DoctorCard
-                people={doctors.filter(doctor => {
+                doctors={doctors.filter(doctor => {
                     const filter = filters.reduce((ac, cv, i) => {
                         ac[cv.name] = cv.options.filter(f => f.checked).map(f => f.label)
                         return ac
