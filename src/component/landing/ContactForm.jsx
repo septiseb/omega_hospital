@@ -18,7 +18,7 @@ const ContactForm = () => {
           <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">¡Queremos saber de ti!</h2>
             <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-              ¿Tienes alguna duda, deseas información o quieres enviarnos un comentario? Llena el siguiente formulario o llamanos al 442-145-2934:
+              ¿Tienes alguna duda, deseas información o quieres enviarnos un comentario? Llena el siguiente formulario o llamanos al 442-582-3235:
             </p>
             <form action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
               <div>
