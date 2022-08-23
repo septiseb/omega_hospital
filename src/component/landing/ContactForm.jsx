@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import  axios from 'axios';
 
 
 const ContactForm = () => {
+
+  const [objectForm, setObjectForm] = useState({firstName:"", lastName:"",email:"",phone:"",status:"Cita",howCanWeHelp:""});
+
+  console.log(objectForm);
+
+  const handleChangeForm = (event) =>{
+      setObjectForm(prevProps=>({...prevProps,[event.target.name] : event.target.value}))
+  }
+
+  const submitForm = (event) =>{
+    event.preventDefault();
+    setObjectForm({firstName:"", lastName:"",email:"",phone:"",status:"Cita",howCanWeHelp:""} );
+  }
+
+  
+
   return (
     <div className="relative bg-white">
       <div className="lg:absolute lg:inset-0">
@@ -20,15 +37,17 @@ const ContactForm = () => {
             <p className="mt-4 text-lg text-gray-500 sm:mt-3">
               ¿Tienes alguna duda, deseas información o quieres enviarnos un comentario? Llena el siguiente formulario o llamanos al 442-582-3235:
             </p>
-            <form action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <form onSubmit={()=>submitForm} action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
               <div>
                 <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                   Nombre
                 </label>
                 <div className="mt-1">
                   <input
+                    onChange={handleChangeForm}
+                    value={objectForm.firstName}
                     type="text"
-                    name="first-name"
+                    name="firstName"
                     id="first-name"
                     autoComplete="given-name"
                     className="block w-full shadow-sm sm:text-sm focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md"
@@ -41,8 +60,10 @@ const ContactForm = () => {
                 </label>
                 <div className="mt-1">
                   <input
+                    onChange={handleChangeForm}
+                    value={objectForm.lastName}
                     type="text"
-                    name="last-name"
+                    name="lastName"
                     id="last-name"
                     autoComplete="family-name"
                     className="block w-full shadow-sm sm:text-sm focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md"
@@ -60,6 +81,8 @@ const ContactForm = () => {
                 </div>
                 <div className="mt-1">
                   <input
+                    onChange={handleChangeForm}
+                    value={objectForm.email}
                     id="email"
                     name="email"
                     type="email"
@@ -74,6 +97,8 @@ const ContactForm = () => {
                 </label>
                 <div className="mt-1">
                   <input
+                    onChange={handleChangeForm}
+                    value={objectForm.phone}
                     type="text"
                     name="phone"
                     id="phone"
@@ -92,15 +117,17 @@ const ContactForm = () => {
                 </div>
                 <div className="mt-1">
                   <select 
-                  id="asunto" 
-                  name="asunto"
+                  onChange={handleChangeForm}
+                  value={objectForm.status}
+                  id="status" 
+                  name="status"
                   className="block w-full shadow-sm sm:text-sm focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md"
                   >
-                    <option value="volvo">Cita</option>
-                    <option value="saab">Comentario sobre servicio</option>
-                    <option value="fiat">Cotización</option>
-                    <option value="audi">Aseguradora</option>
-                    <option value="audi">Otros</option>
+                    <option value="Cita">Cita</option>
+                    <option value="Comentario_Sobre_Servicio">Comentario sobre servicio</option>
+                    <option value="Cotizacion">Cotización</option>
+                    <option value="Aseguradora">Aseguradora</option>
+                    <option value="Otros">Otros</option>
                   </select>
                 </div>
               </div>
@@ -116,12 +143,13 @@ const ContactForm = () => {
                 </div>
                 <div className="mt-1">
                   <textarea
+                    onChange={handleChangeForm}
+                    value={objectForm.howCanWeHelp}
                     id="how-can-we-help"
-                    name="how-can-we-help"
+                    name="howCanWeHelp"
                     aria-describedby="how-can-we-help-description"
                     rows={4}
                     className="block w-full shadow-sm sm:text-sm focus:ring-sky-500 focus:border-sky-500 border border-gray-300 rounded-md"
-                    defaultValue={''}
                   />
                 </div>
               </div>
