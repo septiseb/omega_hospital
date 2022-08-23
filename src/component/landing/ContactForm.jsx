@@ -37,7 +37,7 @@ const ContactForm = () => {
             <p className="mt-4 text-lg text-gray-500 sm:mt-3">
               ¿Tienes alguna duda, deseas información o quieres enviarnos un comentario? Llena el siguiente formulario o llamanos al 442-582-3235:
             </p>
-            <form onSubmit={()=>submitForm} action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <form onSubmit={submitForm}  method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
               <div>
                 <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                   Nombre
