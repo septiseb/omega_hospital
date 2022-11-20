@@ -1,13 +1,15 @@
 import React from 'react';
 import Footer from '../component/Footer';
-import MainLab from '../component/laboratorio/MainLab';
+import LabSection from '../component/laboratorio/LabSection';
 import Nav from '../component/Nav';
 
 const LaboratorioPage = () => {
+
+    
     return (
         <div>
             <Nav />
-            <MainLab />
+            <LabSection />
             <Footer />
         </div>
     );
