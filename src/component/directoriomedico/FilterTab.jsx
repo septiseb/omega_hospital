@@ -136,14 +136,6 @@ const FilterTab = () => {
                         </div>
                     </Dialog>
                 </Transition.Root>
-
-                <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-5xl font-extrabold tracking-tight text-gray-900">Directorio Médico</h1>
-                    <h2 className="mt-4 max-w-xl text-lg text-gray-700">
-                        Encuentra a tu doctor dentro de la gran variedad de especialidades y subespecialidades que Omega Centro Médico tiene para ti:
-                    </h2>
-                </div>
-
                 {/* Filters */}
                 <section aria-labelledby="filter-heading">
                     <h2 id="filter-heading" className="sr-only">

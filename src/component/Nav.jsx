@@ -35,7 +35,7 @@ const Nav = () => {
     return (
         <>
             <header>
-                <nav className="relative bg-gray-100">
+                <nav className="relative bg-gray-100 border-b-2 border-gray-300">
 
                     <Popover className="relative ">
                         <div className="flex items-center max-w-7xl mx-auto px-12 py-4 sm:px-6 md:justify-center md:space-x-16 lg:px-12">
