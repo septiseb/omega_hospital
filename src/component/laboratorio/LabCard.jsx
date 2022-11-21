@@ -53,8 +53,8 @@ const LabCard = () => {
   return (  
   <>
   {studies.map(s=>(
-          <div className="relative my-6 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-lg bg-sky-200 overflow-hidden rounded-lg  shadow-lg lg:flex lg:max-w-none">
+          <div className="relative  my-6 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-lg  overflow-hidden border-2 border-sky-500 rounded-lg  shadow-lg lg:flex lg:max-w-none">
             <div className="flex-1 px-6 py-8 lg:p-12">
               <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight"><u>{studies[0].Estudio}</u></h3>
               <p className="mt-6 text-base text-gray-500">

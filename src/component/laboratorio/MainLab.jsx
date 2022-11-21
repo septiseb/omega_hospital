@@ -1,21 +1,36 @@
-import React from 'react'
+import React from "react";
 
- const MainLab = () => {
+const MainLab = () => {
   return (
-      <div className="pt-12 sm:pt-16 lg:pt-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              Simple no-tricks pricing
-            </h2>
-            <p className="mt-4 text-xl text-gray-600">
-              If you're not satisfied, contact us within the first 14 days and we'll send you a full refund.
-            </p>
+    <main>
+      <div>
+        {/* Hero card */}
+        <div className="relative">
+          <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gray-100" />
+          <div className="mx-auto">
+            <div className="relative shadow-xl sm:overflow-hidden ">
+              <div className="absolute inset-0">
+                <img
+                  className="h-full w-full object-cover"
+                  src={require("../../utils/img/lab_portada_page.jpg")}
+                  alt="People working on laptops"
+                />
+                <div className="absolute inset-0 bg-sky-700 mix-blend-multiply" />
+              </div>
+              <div className="relative px-4 py-12 sm:px-6 sm:py-16 lg:py-22 lg:px-8">
+                <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                  <span className="block text-white">Estudios</span>
+                </h1>
+                <p className="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-100 sm:max-w-3xl">
+                  Grupo de pruebas químicas y estudios especializados para detectar o prevenir algún padecimiento:
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-  )
-}
-
+    </main>
+  );
+};
 
 export default MainLab;
