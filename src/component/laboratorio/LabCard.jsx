@@ -1,64 +1,16 @@
 import React from 'react'
-
-const studies = [{
-    Ranking: 1,
-    Estudio: "17 HIDROXICORTICOSTEROIDES",
-    Filtro_1: "",
-    Filtro_2: "",
-    Descripcion: "Recolectar orina de 24 h. Eliminar la primera micción de la mañana y a partir de la segunda micción recolectar en un frasco limpio sin conservador durante todo el día hasta la primera micción del día siguiente, manteniendo la muestra refrigerada durante la recolección.",
-    Preparacion_Estudio: "",
-    Dias_de_Resultado: "",
-    Precio: "537.00",
-    Promocion: "no",
-    Pct_Promocion: "",
-    Precio_Promocions: ""
-  }, {
-    Ranking: 1,
-    Estudio: "17 HIDROXICORTICOSTEROIDES",
-    Filtro_1: "",
-    Filtro_2: "",
-    Descripcion: "Recolectar orina de 24 h. Eliminar la primera micción de la mañana y a partir de la segunda micción recolectar en un frasco limpio sin conservador durante todo el día hasta la primera micción del día siguiente, manteniendo la muestra refrigerada durante la recolección.",
-    Preparacion_Estudio: "",
-    Dias_de_Resultado: "",
-    Precio: "537.00",
-    Promocion: "no",
-    Pct_Promocion: "",
-    Precio_Promocions: ""
-  },
-  {
-    Ranking: 1,
-    Estudio: "17 HIDROXICORTICOSTEROIDES",
-    Filtro_1: "",
-    Filtro_2: "",
-    Descripcion: "Recolectar orina de 24 h. Eliminar la primera micción de la mañana y a partir de la segunda micción recolectar en un frasco limpio sin conservador durante todo el día hasta la primera micción del día siguiente, manteniendo la muestra refrigerada durante la recolección.",
-    Preparacion_Estudio: "",
-    Dias_de_Resultado: "",
-    Precio: "537.00",
-    Promocion: "no",
-    Pct_Promocion: "",
-    Precio_Promocions: ""
-  },
-]
-
-
-const includedFeatures = [
-    'Private forum access',
-    'Member resources',
-    'Entry to annual conference',
-    'Official member t-shirt',
-  ]
-
   
-const LabCard = () => {
+const LabCard = ({lab}) => {
+
   return (  
   <>
-  {studies.map(s=>(
+
           <div className="relative  my-6 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-lg  overflow-hidden border-2 border-sky-500 rounded-lg  shadow-lg lg:flex lg:max-w-none">
             <div className="flex-1 px-6 py-8 lg:p-12">
-              <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight"><u>{studies[0].Estudio}</u></h3>
+              <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight"><u>{lab.Estudio}</u></h3>
               <p className="mt-6 text-base text-gray-500">
-                  {studies[0].Descripcion}
+                  {lab.Descripcion}
               </p>
               {/* 
               <div className="mt-8">
@@ -80,10 +32,10 @@ const LabCard = () => {
               </div>
               */}
             </div>
-            <div className="bg-gray-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12">
+            <div className="bg-gray-100 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12">
               <p className="text-lg font-medium leading-6 text-gray-900">Precio</p>
               <div className="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900">
-                <span>${studies[0].Precio}</span>
+                <span>${lab.Precio}</span>
               </div>
               {/* 
               <p className="mt-4 text-sm">
@@ -110,7 +62,6 @@ const LabCard = () => {
             </div>
           </div>
         </div>
-  ))}
   </>
 
 
