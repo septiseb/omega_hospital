@@ -1,11 +1,10 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import DoctorCard from './DoctorCard';
 import { getDirectory } from '../../services/api/sheets';
 import { transformArray, transformFilter } from '../../services/functions/googleTransform';
-import { useEffect } from 'react';
 import { classNames } from '../../services/functions/textFormat';
 
 const FilterTab = () => {

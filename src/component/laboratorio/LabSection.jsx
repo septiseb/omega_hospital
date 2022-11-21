@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { getLaboratory } from '../../services/api/sheets'
 import LabCard from './LabCard'
 import MainLab from './MainLab'
+import FilterLab from './FilterTab'
 
 const LabSection = () => {
 
@@ -13,6 +14,7 @@ useEffect(() => {
   return (
     <>
     <MainLab />
+    <FilterLab />
     <LabCard />
     </>
   )
