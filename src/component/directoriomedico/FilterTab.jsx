@@ -142,7 +142,44 @@ const FilterTab = () => {
                         Filtros
                     </h2>
 
-                    <div className="relative z-10 bg-white border-b border-gray-200 pb-4">
+                
+
+                    {/* Active filters */}
+                    <div className="bg-gray-100">
+                        <div className="max-w-7xl mx-auto py-3 px-4 sm:flex sm:items-center sm:px-6 lg:px-8">
+                            <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                                Filtros
+                                <span className="sr-only">, activo</span>
+                            </h3>
+
+                            <div aria-hidden="true" className="hidden w-px h-5 bg-gray-300 sm:block sm:ml-4" />
+
+                            <div className="mt-2 sm:mt-0 sm:ml-4">
+                                <div className="-m-1 flex flex-wrap items-center">
+                                    {actFilter.map((activeFilter, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="m-1 inline-flex rounded-full border border-gray-200 items-center py-1.5 pl-3 pr-2 text-sm font-medium bg-white text-gray-900"
+                                        >
+                                            <span>{activeFilter.label}</span>
+                                            <button
+                                                type="button"
+                                                className="flex-shrink-0 ml-1 h-4 w-4 p-1 rounded-full inline-flex text-gray-400 hover:bg-gray-200 hover:text-gray-500"
+                                                onClick={() => onDelete(activeFilter)}
+                                            >
+                                                <span className="sr-only">Remover filtro para {activeFilter.label}</span>
+                                                <svg className="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                                                    <path strokeLinecap="round" strokeWidth="1.5" d="M1 1l6 6m0-6L1 7" />
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="relative z-10 bg-white border-b-2 border-gray-300 p-2 mb-4">
                         <div className="max-w-7xl mx-auto px-4 flex items-center justify-end sm:px-6 lg:px-8">
                             <button
                                 type="button"
@@ -211,40 +248,6 @@ const FilterTab = () => {
                         </div>
                     </div>
 
-                    {/* Active filters */}
-                    <div className="bg-gray-100">
-                        <div className="max-w-7xl mx-auto py-3 px-4 sm:flex sm:items-center sm:px-6 lg:px-8">
-                            <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                                Filtros
-                                <span className="sr-only">, activo</span>
-                            </h3>
-
-                            <div aria-hidden="true" className="hidden w-px h-5 bg-gray-300 sm:block sm:ml-4" />
-
-                            <div className="mt-2 sm:mt-0 sm:ml-4">
-                                <div className="-m-1 flex flex-wrap items-center">
-                                    {actFilter.map((activeFilter, idx) => (
-                                        <span
-                                            key={idx}
-                                            className="m-1 inline-flex rounded-full border border-gray-200 items-center py-1.5 pl-3 pr-2 text-sm font-medium bg-white text-gray-900"
-                                        >
-                                            <span>{activeFilter.label}</span>
-                                            <button
-                                                type="button"
-                                                className="flex-shrink-0 ml-1 h-4 w-4 p-1 rounded-full inline-flex text-gray-400 hover:bg-gray-200 hover:text-gray-500"
-                                                onClick={() => onDelete(activeFilter)}
-                                            >
-                                                <span className="sr-only">Remover filtro para {activeFilter.label}</span>
-                                                <svg className="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
-                                                    <path strokeLinecap="round" strokeWidth="1.5" d="M1 1l6 6m0-6L1 7" />
-                                                </svg>
-                                            </button>
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </section>
             </div >
             <DoctorCard

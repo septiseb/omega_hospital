@@ -60,6 +60,7 @@ const LabCard = () => {
               <p className="mt-6 text-base text-gray-500">
                   {studies[0].Descripcion}
               </p>
+              {/* 
               <div className="mt-8">
                 <div className="flex items-center">
                   <h4 className="flex-shrink-0 pr-4 text-base font-semibold text-indigo-600">
@@ -77,12 +78,14 @@ const LabCard = () => {
                   ))}
                 </ul>
               </div>
+              */}
             </div>
             <div className="bg-gray-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12">
               <p className="text-lg font-medium leading-6 text-gray-900">Precio</p>
               <div className="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900">
                 <span>${studies[0].Precio}</span>
               </div>
+              {/* 
               <p className="mt-4 text-sm">
                 <a href="#" className="font-medium text-gray-500 underline">
                   Learn about our membership policy
@@ -103,6 +106,7 @@ const LabCard = () => {
                   Get a free sample <span className="font-normal text-gray-500">(20MB)</span>
                 </a>
               </div>
+              */}
             </div>
           </div>
         </div>
