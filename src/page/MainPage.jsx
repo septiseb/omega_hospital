@@ -12,7 +12,7 @@ const MainPage = () => {
     return (
         <>  
         <Seo 
-         title="Centro Médico Omega | Servicios médicos integrales"
+         title="Hospital Centro Médico Omega | Servicios médicos integrales"
          description="Accede a los mejores médicos y profesionales de la salud de San Juan del Río. Somos un hospital integral que cubre múltiples servicios médicos y de emergencias. Omega Centro Médico."
          pathSlug=""
          keywords={keywords}
