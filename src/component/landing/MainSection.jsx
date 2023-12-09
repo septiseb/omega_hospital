@@ -13,8 +13,8 @@ const MainSection = () => {
 
   return (
     <>
-      <div className="item-center flex justify-center">
-        <div className="flex w-2/3">
+      <div className="item-center flex justify-center mb-12">
+        <div className="flex w-3/4">
           <Carrousel interval={3000}>
             {imgArr.map((im, idx) => (
               <img
