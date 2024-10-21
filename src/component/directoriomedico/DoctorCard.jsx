@@ -9,26 +9,26 @@ const DoctorCard = ({ doctors }) => {
         {doctors.map((doctor, idx) => (
           <li
             key={idx}
-            className="col-span-1 bg-white rounded-lg border-sky-200 border shadow divide-y divide-gray-200"
+            className="col-span-1 bg-white rounded-lg border-sky-200 border shadow divide-y divide-gray-200 text-wrap"
           >
-            <div className="w-full flex items-center justify-between p-6 space-x-4">
+            <div className="w-full flex items-center justify-between p-6 space-x-4 text-wrap">
               <MdLocalHospital className="w-8 h-8 flex-shrink-0 text-sky-600" />
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
-                  <h3 className="text-gray-900 text-lg font-medium truncate w-full sm:w-auto">
+                  <h3 className="text-gray-900 text-lg font-medium text-wrap w-full sm:w-auto">
                     {doctor.Nombre} {doctor.Apellido}
                   </h3>
                   <span className="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">
                     {doctor.Cedula}
                   </span>
                 </div>
-                <p className="mt-1 text-gray-800 text-m italic truncate w-full sm:w-auto">
+                <p className="mt-1 text-gray-800 text-m italic text-wrap w-full sm:w-auto">
                   {doctor.Especialidad}
                   {doctor.Subespecialidad
                     ? " en " + doctor.Subespecialidad
                     : null}
                 </p>
-                <p className="mt-2 text-gray-500 text-sm overflow-hidden h-10 truncate w-full sm:w-auto">
+                <p className="mt-2 text-gray-500 text-sm overflow-hidden h-10 text-wrap w-full sm:w-auto">
                   {doctor.Descripcion}
                 </p>
               </div>
